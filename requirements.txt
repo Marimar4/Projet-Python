@@ -1,8 +1,10 @@
-%pip install numpy
-%pip install pandas
-%pip install matplotlib
-%pip install openpyxl
-%pip install pycodestyle
-%pip install pycountry
-%pip install seaborn
-%pip install pickleshare
+# ne pas oublier de mettre le numero de version
+numpy
+pandas
+matplotlib
+openpyxl
+pycodestyle
+pycountry
+seaborn
+pickleshare
+missingno
