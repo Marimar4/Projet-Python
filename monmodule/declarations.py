@@ -41,8 +41,13 @@ def extraire_fichier_zip(chemin_zip, nom_fichier, nom_feuille):
             df= pd.read_excel(BytesIO(fichier_in_zip.read()),sheet_name=nom_feuille, header=0)\
                         .rename(columns={'Unnamed: 0':'Year'})\
                             .assign(Year=lambda x: x['Year'].astype(str).str.rstrip('.0'))
-            # Convertir la colonne 'Year' en format de date
-            df['Year'] = pd.to_datetime(df['Year'], format='%YM%m')
+            
+            if nom_feuille == 'quarterly':
+                # Convertir la colonne 'Year' en format de date
+                df['Year'] = pd.to_datetime(df['Year'], format='%YQ%m')
+            else:
+                # Convertir la colonne 'Year' en format de date trimestriel
+                df['Year'] = pd.to_datetime(df['Year'], format='%YM%m')
 
             # Définir 'Year' comme index pour faciliter la manipulation des périodes
             df.set_index('Year', inplace=True)
