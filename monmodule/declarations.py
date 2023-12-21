@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import pycountry
 import seaborn as sns
 import missingno as msno
-
+from statistics import *
 
 np.random.seed(123)
 
@@ -43,10 +43,10 @@ def extraire_fichier_zip(chemin_zip, nom_fichier, nom_feuille):
                             .assign(Year=lambda x: x['Year'].astype(str).str.rstrip('.0'))
             
             if nom_feuille == 'quarterly':
-                # Convertir la colonne 'Year' en format de date
+                # Convertir la colonne 'Year' en format de date trimestriel
                 df['Year'] = pd.to_datetime(df['Year'], format='%YQ%m')
             else:
-                # Convertir la colonne 'Year' en format de date trimestriel
+                 # Convertir la colonne 'Year' en format de date mensuelle
                 df['Year'] = pd.to_datetime(df['Year'], format='%YM%m')
 
             # Définir 'Year' comme index pour faciliter la manipulation des périodes
@@ -58,6 +58,22 @@ def extraire_fichier_zip(chemin_zip, nom_fichier, nom_feuille):
 
 # Méthode search_fuzzy de pycountry pour corrections des noms des pays
 def correct_country_name(col_names):
+    countries_detected = []
+    
+    for name in col_names:
+        try:
+            # Essayer de trouver le pays par son nom
+            pays= pycountry.countries.search_fuzzy(name)[0]
+            countries_detected.append(pays.name)
+        except LookupError:
+            # Conserver les noms qui ne correspondent à aucun pays
+            countries_detected.append(name)
+             # Ignorer les noms qui ne correspondent à aucun pays
+            #pass
+    
+    return countries_detected
+
+def detect_country_name(col_names):
     countries_detected = []
     
     for name in col_names:
@@ -94,11 +110,14 @@ def missing_plot(df):
 
 def missing(df):
 
+    # Suppression des deux prmières lignes
+
+    df = df.iloc[2:]
     # Suppression de certaines valeurs manquantes
 
-    df.dropna(axis=1, thresh=len(df) * 0.6, inplace=True)
+    df.dropna(axis=1, thresh=len(df) * 0.9, inplace=True)
 
-    (df.isna().sum() / len(df) * 100)[df.isna().any()].sort_values(ascending=False)
+    return (df.isna().sum() / len(df) * 100)[df.isna().any()].sort_values(ascending=False)
 
     ## affichage du pourcentage de valeurs manquantes par pays pour des pays ayant des valeurs manquantes
 
