@@ -1,3 +1,20 @@
+# Importation des bases des packages
+import io 
+from io import BytesIO 
+import pycodestyle as pep8
+import zipfile
+import requests
+import openpyxl as xl
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import pycountry
+import seaborn as sns
+import missingno as msno
+from statistics import *
+
+np.random.seed(123)
+
 class MonProjet:
     def __init__(self) -> None:
         self.f_gmd = 'GMD'
