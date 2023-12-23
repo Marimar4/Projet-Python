@@ -16,7 +16,7 @@ from statistics import *
 
 np.random.seed(123)
 
-# declaration des focntions
+# declaration des fonctions
 
 ## Télécharger le fichier
 
