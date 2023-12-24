@@ -54,9 +54,9 @@ class MonProjet:
         self.f_pib = "pib"
         self.f_unemployment_rate = "unemployment_rate"
 
-        """Rajouter les méthodes"""
-        pass
-"""""""
+        #Rajouter les méthodes
+        pass """
+
 
 # Déclaration des fonctions
 
@@ -66,9 +66,9 @@ class MonProjet:
 def load(url, nom_fichier):
     response = requests.get(url)
 
-    """ Vérifier si le téléchargement a réussi (code d'état 200)"""
+    """Vérifier si le téléchargement a réussi (code d'état 200)"""
     if response.status_code == 200:
-        """Enregistrer le contenu dans un fichier  ("nom_fichier")"""
+        """Enregistrer le contenu dans un fichier ("nom_fichier")"""
         with open(nom_fichier, "wb") as file:
             file.write(response.content)
         print("Téléchargement de base", nom_fichier, "réussi.")
