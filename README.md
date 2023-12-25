@@ -1,12 +1,16 @@
 # Projet Python pour la data science : Vérification de la Loi d'Okun 
  
-Dans le terminal, vérifier si le code est en conformité avec les règles pep8 en installant flake8 'pip install flake8', puis en executant la syntaxe 'flake8'.
-Un autre outils similaire à flake8 est pycodestyle. Il fait le même travail que flake8 
-
 
 ## Introduction
 
-Ce projet vise à vérifier la Loi d'Okun sur plusieurs pays du monde en utilisant des bases de données open source fournies par la Banque mondiale. La Loi d'Okun établit une relation entre le taux de croissance du PIB et le taux de chômage d'un pays.
+L'objectif de ce travail est de mettre en pratique les différents élements parcourus en cours sur le language 'Python' et ce par le choix d'une problématque que nous sommes amenés à traiter. La problématique choisie est à dimension économique, il s'agit de vérifier empiriquement la validité de la loi d'Okun. Cette dernière, définit une relation inverse entre le taux de chômage et le taux de croissance économique, postulant qu'une augmentation dans la demande globale incite les entreprises à embaucher davantage de travailleurs afin de pour répondre à la demande croissante de biens et de services.
+
+Nous disposons pour cela de bases de données Open source fournies par la Banque mondiale, ces dernières comportent les taux de chomage etde croissance économique pour différents pays du monde.
+   -Les données de la base de données sur le taux de chomage sont mensuelles et s'étalent sur plusieurs années, allant de **Décembre 1993** à **Octobre 2023**.
+   -Les données de la base de données sur le taux de croissance du PIB sont trimestrielles et s'étalent sur plusieurs années, allant du premier trimestre de **1994** au quatrième trimestre de **2023**.
+
+**Précision :** La base de données sur le taux de croissance du PIB est celle du PIB déflaté (PIB réel), l'effet de l'inflation étant alors éliminé.
+
 
 ## Objectifs
 
@@ -18,11 +22,13 @@ Ce projet vise à vérifier la Loi d'Okun sur plusieurs pays du monde en utilisa
 
 Les données utilisées dans ce projet proviennent des sources suivantes :
 - Taux de chômage : [Banque mondiale - Indicateurs du travail](lien_vers_la_source)
-- PIB : [Banque mondiale - Indicateurs économiques](lien_vers_la_source)
+- PIB : [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
+- Indicateurs socio-économiques : https://datacatalog.worldbank.org/search/dataset/0037652/Health-Nutrition-and-Population-Statistics
+- Inégalités : [Spatial Inequalities] 
+- https://datacatalog.worldbank.org/search/dataset/0064524/Spatial-Inequalities
 
-## Technologies utilisées
+## Méthodes utilisées
 
-- Python
 - Pandas pour la manipulation des données
 - Matplotlib et Seaborn pour la visualisation
 - Jupyter Notebook pour l'analyse interactive
@@ -38,6 +44,6 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 1. Clonez ce dépôt sur votre machine locale.
 
    ```bash
-   git clone https://github.com/votre-utilisateur/nom-du-projet.git
+   git clone https://github.com/Marimar4/Projet-Python.git
 
 # tmp
