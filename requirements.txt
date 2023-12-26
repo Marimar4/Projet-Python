@@ -8,3 +8,8 @@ pycountry
 seaborn
 pickleshare
 missingno
+panel
+jupyter_bokeh
+panel bokeh
+geopandas
+plotly dash
