@@ -12,7 +12,7 @@ import io
 from io import BytesIO
 import seaborn as sns
 import missingno as msno
-<<<<<<< HEAD
+
 from statistics import *
 import panel as pn
 import hvplot.pandas
@@ -25,10 +25,8 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_table
 import plotly.express as px
-
-=======
 import statistics 
->>>>>>> c384057ace56608a429d326a4945f7e32fc56241
+
 
 np.random.seed(123)
 
