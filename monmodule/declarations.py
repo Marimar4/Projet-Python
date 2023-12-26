@@ -12,11 +12,21 @@ import io
 from io import BytesIO
 import seaborn as sns
 import missingno as msno
-import geopandas as gpd
-import plotly.express as px
-import folium
 
+from statistics import *
+import panel as pn
+import hvplot.pandas
+import geopandas as gpd
+
+
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+import dash_table
+import plotly.express as px
 import statistics 
+
 
 np.random.seed(123)
 
@@ -290,3 +300,7 @@ def transform(df, nom):
     # Réinitialiser l'index si nécessaire
     df_transformed.reset_index(drop=True, inplace=True)
     return df_transformed
+
+
+## ************ visualisation avec la carte***********###
+
