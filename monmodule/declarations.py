@@ -302,10 +302,7 @@ def transform(df, nom):
     # Réinitialiser l'index si nécessaire
     df_transformed.reset_index(drop=True, inplace=True)
     return df_transformed
-<<<<<<< HEAD
 
 
 ## ************ visualisation avec la carte***********###
 
-=======
->>>>>>> c384057ace56608a429d326a4945f7e32fc56241
