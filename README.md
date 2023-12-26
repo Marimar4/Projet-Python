@@ -24,8 +24,7 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 - Taux de chômage : [Banque mondiale - Indicateurs du travail](lien_vers_la_source)
 - PIB : [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
 - Indicateurs socio-économiques : https://datacatalog.worldbank.org/search/dataset/0037652/Health-Nutrition-and-Population-Statistics
-- Inégalités : [Spatial Inequalities] 
-- https://datacatalog.worldbank.org/search/dataset/0064524/Spatial-Inequalities
+- Inégalités : [Spatial Inequalities] : https://datacatalog.worldbank.org/search/dataset/0064524/Spatial-Inequalities
 
 ## Méthodes utilisées
 
