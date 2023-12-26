@@ -12,6 +12,10 @@ import io
 from io import BytesIO
 import seaborn as sns
 import missingno as msno
+import geopandas as gpd
+import plotly.express as px
+import folium
+
 import statistics 
 
 np.random.seed(123)
