@@ -45,4 +45,3 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
    ```bash
    git clone https://github.com/Marimar4/Projet-Python.git
 
-# tmp
