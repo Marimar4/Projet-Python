@@ -15,17 +15,21 @@ import missingno as msno
 
 from statistics import *
 import panel as pn
-import hvplot.pandas
+#import hvplot.pandas
 import geopandas as gpd
 
 
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash.dependencies import Input, Output
-import dash_table
+from dash import dash_table
 import plotly.express as px
 import statistics 
+
+import statsmodels.tsa.filters.hp_filter as smf
+import statsmodels.tsa.ardl as sma
+import statsmodels.api as sm
 
 
 np.random.seed(123)
