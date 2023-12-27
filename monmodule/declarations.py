@@ -15,7 +15,7 @@ import missingno as msno
 
 from statistics import *
 import panel as pn
-import hvplot.pandas
+#import hvplot.pandas
 import geopandas as gpd
 
 
@@ -27,14 +27,18 @@ import dash_table
 import plotly.express as px
 import statistics 
 
+import statsmodels.tsa.filters.hp_filter as smf
+import statsmodels.tsa.ardl as sma
+import statsmodels.api as sm
+
+import pandas as pd
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
 
 np.random.seed(123)
-
-<<<<<<< HEAD
-# declaration des fonctions
-=======
->>>>>>> a25be6e5e960371478ffc40439a5592f2161b3cd
-
 
 """
 class MonProjet:
@@ -195,11 +199,6 @@ def missing_plot(df):
 
 
 # *********** affichage des valeurs manquantes **********#
-
-<<<<<<< HEAD
-    # Suppression des deux premières lignes
-=======
->>>>>>> a25be6e5e960371478ffc40439a5592f2161b3cd
 
 def missing(df):
     # Suppression de certaines valeurs manquantes
