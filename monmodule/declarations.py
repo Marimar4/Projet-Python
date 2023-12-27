@@ -30,10 +30,7 @@ import statistics
 
 np.random.seed(123)
 
-<<<<<<< HEAD
-# declaration des fonctions
-=======
->>>>>>> a25be6e5e960371478ffc40439a5592f2161b3cd
+# Déclaration des fonctions
 
 
 """
@@ -196,10 +193,7 @@ def missing_plot(df):
 
 # *********** affichage des valeurs manquantes **********#
 
-<<<<<<< HEAD
     # Suppression des deux premières lignes
-=======
->>>>>>> a25be6e5e960371478ffc40439a5592f2161b3cd
 
 def missing(df):
     # Suppression de certaines valeurs manquantes
