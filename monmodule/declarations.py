@@ -20,10 +20,10 @@ import geopandas as gpd
 
 
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 from dash.dependencies import Input, Output
-import dash_table
+from dash import dash_table
 import plotly.express as px
 import statistics 
 
@@ -33,6 +33,9 @@ import statsmodels.api as sm
 
 
 np.random.seed(123)
+
+# Déclaration des fonctions
+
 
 """
 class MonProjet:
@@ -193,6 +196,8 @@ def missing_plot(df):
 
 
 # *********** affichage des valeurs manquantes **********#
+
+    # Suppression des deux premières lignes
 
 def missing(df):
     # Suppression de certaines valeurs manquantes
