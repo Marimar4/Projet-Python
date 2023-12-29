@@ -320,7 +320,7 @@ def analyse_serie_temporelle_pays(data, indicateur, pays):
     df=data.copy()
     # Utilisation de la fonction pivot pour remodeler le dataframe
     df = df.pivot(index=['YEAR'], columns='COUNTRY', values=indicateur)
-    df['YEAR'] = d.pd.to_datetime(df.index)
+    df['YEAR'] = pd.to_datetime(df.index)
     
     # Sélectionner la série temporelle du pays spécifique
     serie_temporelle = df[pays].dropna()
@@ -337,7 +337,7 @@ def analyse_serie_temporelle_pays(data, indicateur, pays):
     plt.show()
 
     # Décomposition saisonnière
-    decomposition = d.seasonal_decompose(serie_temporelle, model='multiplicative', period=4)
+    decomposition = seasonal_decompose(serie_temporelle, model='multiplicative', period=4)
 
     # Visualisation des composants décomposés
     plt.figure(figsize=(12, 8))
@@ -366,5 +366,5 @@ def analyse_serie_temporelle_pays(data, indicateur, pays):
     plt.show()
 
     # Test de stationnarité (Augmented Dickey-Fuller)
-    result = d.adfuller(serie_temporelle)
+    result = adfuller(serie_temporelle)
     print(f'Test de Dickey-Fuller Augmenté:\nStatistique de test = {result[0]}\nValeur critique = {result[4]}')
