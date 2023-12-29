@@ -42,6 +42,17 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller#,detrend
 from scipy.signal import find_peaks
 
+
+
+import dash
+from dash import dcc, html
+from dash.dependencies import Input, Output
+import pandas as pd
+import plotly.express as px
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.stattools import adfuller
+
+
 np.random.seed(123)
 
 # Déclaration des fonctions
