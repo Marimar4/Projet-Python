@@ -5,7 +5,7 @@
 
 L'objectif de ce travail est de mettre en pratique les différents élements parcourus en cours sur le language 'Python' et ce par le choix d'une problématique que nous sommes amenés à traiter. La problématique choisie est à dimension économique, il s'agit de vérifier empiriquement la validité de la loi d'Okun. Cette dernière, définit une relation inverse entre le taux de chômage et le taux de croissance économique, postulant qu'une augmentation dans la demande globale incite les entreprises à embaucher davantage de travailleurs pour répondre à la demande croissante des biens et services.
 
-Nous disposons pour cela de bases de données **Open source** fournies par la Banque mondiale, ces dernières comportent les taux de chomage, taux de croissance économique ainsi que d'autres indicateurs socio-économique pour différents pays du monde.
+Nous disposons pour cela de bases de données **Open source** fournies par la Banque mondiale, ces dernières comportent les taux de chomage, taux de croissance économique ainsi que d'autres indicateurs socio-économiques pour différents pays du monde.
    -Les données de la base de données sur le taux de chômage sont mensuelles et s'étalent sur plusieurs années, allant de **Décembre 1993** à **Octobre 2023**.
    -Les données de la base de données sur le taux de croissance du PIB sont trimestrielles et s'étalent sur plusieurs années, allant du premier trimestre de **1994** au quatrième trimestre de **2023**.
 
@@ -15,7 +15,14 @@ Nous disposons pour cela de bases de données **Open source** fournies par la Ba
 
 ## Revue de littérature : 
 
-Loi d'Okun :
+**Loi d'Okun :** 
+Pour ce projet de modélisation, nous nous sommes inspirés des travaux suivants : 
+
+- [1]. Traoré, D. L., Diakite, S., & Mariko, O. (2021). Croissance et chômage au Mali : Vérification empirique de la loi d'Okun. Revue Malienne de Science et de Technologie, Série C : Sciences Humaines et Sociales, 02(25), Page. ISSN 1987-1031. CNRST, Bamako, Mali.
+
+- [2]. Aassif, Z. L'extraction de la tendance cycle. Haut-Commissariat au Plan, Direction de la comptabilité nationale. 
+
+- [3]. Mills, T. C. (2019). Chapter 12 - Transfer Functions and Autoregressive Distributed Lag Modeling. In Applied Time Series Analysis: A Practical Guide to Modeling and Forecasting (pp. 201-210). Loughborough University, Loughborough, United Kingdom. https://doi.org/10.1016/B978-0-12-813117-6.00012-0
 
 ## Objectifs
 
