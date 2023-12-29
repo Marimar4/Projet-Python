@@ -4,6 +4,7 @@
 import pycodestyle as pep8 # not used
 import zipfile
 import requests
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -91,7 +92,8 @@ def load(url, nom_fichier):
     """Vérifier si le téléchargement a réussi (code d'état 200)"""
     if response.status_code == 200:
         """Enregistrer le contenu dans un fichier ("nom_fichier")"""
-        with open(nom_fichier, "wb") as file:
+        chemin_fichier = os.path.join('bases', nom_fichier)
+        with open(chemin_fichier, "wb") as file:
             file.write(response.content)
         print("Téléchargement de base", nom_fichier, "réussi.")
     else:
