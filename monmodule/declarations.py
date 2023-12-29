@@ -19,7 +19,6 @@ import panel as pn
 #import hvplot.pandas
 import geopandas as gpd
 
-
 import dash
 from dash import dcc,html
 from dash.dependencies import Input, Output
@@ -29,7 +28,14 @@ import statistics
 
 import statsmodels.tsa.filters.hp_filter as smf
 import statsmodels.tsa.ardl as sma
+
+from statsmodels.tsa.stattools import adfuller
 import statsmodels.api as sm
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+from mpl_toolkits.mplot3d import Axes3D
  
 
 from statsmodels.tsa.seasonal import seasonal_decompose
