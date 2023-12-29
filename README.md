@@ -45,7 +45,7 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 
 ## Brainstorm
 
-- **Jupyter Notebook**[^1] est un environnement interactif de développement et d'exécution de code qui permet de créer et de partager des documents contenant du code, des visualisations et du texte explicatif.
+- **Jupyter Notebook**[*1] est un environnement interactif de développement et d'exécution de code qui permet de créer et de partager des documents contenant du code, des visualisations et du texte explicatif.
 - **Pandas**[^2] est une bibliothèque open source fournissant des structures de données et des outils d'analyse de données hautes performances. Elle offre des structures de données flexibles et performantes, notamment le **DataFrame**, l'objet le plus utilisé de Pandas et qui permet de stocker et de manipuler des données tabulaires de manière efficace. 
 - **Matplotlib**[^3] Matplotlib est une bibliothèque complète permettant de créer des visualisations statiques, animées et interactives.
 - **Seaborn**[^4] est une bibliothèque de visualisation de données Python basée sur matplotlib . Il fournit une interface de haut niveau pour dessiner des graphiques statistiques attrayants et informatifs. Elle facilite la création de graphiques basés sur des données DataFrame de pandas.
@@ -65,6 +65,8 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
    ```bash
    git clone https://github.com/Marimar4/Projet-Python.git
 
+
+##
 
 [^1] : https://docs.jupyter.org/en/latest/ <br>
 [^2] : https://pandas.pydata.org/docs/index.html <br>
