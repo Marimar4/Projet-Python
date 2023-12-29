@@ -45,11 +45,11 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 
 ## Brainstorm
 
-- [Jupyter Notebook][^1] est un environnement interactif de développement et d'exécution de code qui permet de créer et de partager des documents contenant du code, des visualisations et du texte explicatif.
-- **Pandas**[^2] est une bibliothèque open source fournissant des structures de données et des outils d'analyse de données hautes performances. Elle offre des structures de données flexibles et performantes, notamment le **DataFrame**, l'objet le plus utilisé de Pandas et qui permet de stocker et de manipuler des données tabulaires de manière efficace. 
-- **Matplotlib**[^3] Matplotlib est une bibliothèque complète permettant de créer des visualisations statiques, animées et interactives.
-- **Seaborn**[^4] est une bibliothèque de visualisation de données Python basée sur matplotlib . Il fournit une interface de haut niveau pour dessiner des graphiques statistiques attrayants et informatifs. Elle facilite la création de graphiques basés sur des données DataFrame de pandas.
-- **NumPy**[^5] est un package pour le calcul scientifique en Python. 
+- [Jupyter Notebook](https://docs.jupyter.org/en/latest/) est un environnement interactif de développement et d'exécution de code qui permet de créer et de partager des documents contenant du code, des visualisations et du texte explicatif.
+- [Pandas](https://pandas.pydata.org/docs/index.html) est une bibliothèque open source fournissant des structures de données et des outils d'analyse de données hautes performances. Elle offre des structures de données flexibles et performantes, notamment le **DataFrame**, l'objet le plus utilisé de Pandas et qui permet de stocker et de manipuler des données tabulaires de manière efficace. 
+- [Matplotlib](https://matplotlib.org/stable/index.html) est une bibliothèque complète permettant de créer des visualisations statiques, animées et interactives.
+- [Seaborn](https://seaborn.pydata.org/) est une bibliothèque de visualisation de données Python basée sur matplotlib . Il fournit une interface de haut niveau pour dessiner des graphiques statistiques attrayants et informatifs. Elle facilite la création de graphiques basés sur des données DataFrame de pandas.
+- [NumPy](https://numpy.org/doc/) est un package pour le calcul scientifique en Python. 
 
 
 ## Structure du Projet
@@ -64,12 +64,3 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 
    ```bash
    git clone https://github.com/Marimar4/Projet-Python.git
-
-
-##
-
-[^2]: [Jupyter Notebook](https://docs.jupyter.org/en/latest/)
-[^2] : https://pandas.pydata.org/docs/index.html 
-[^3] : https://matplotlib.org/stable/index.html 
-[^4] : https://seaborn.pydata.org/ 
-[^5] : https://numpy.org/doc/
