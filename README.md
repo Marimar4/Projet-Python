@@ -5,9 +5,9 @@
 
 L'objectif de ce travail est de mettre en pratique les différents élements parcourus en cours sur le language 'Python' et ce par le choix d'une problématique que nous sommes amenés à traiter. La problématique choisie est à dimension économique, il s'agit de vérifier empiriquement la validité de la loi d'Okun. Cette dernière, définit une relation inverse entre le taux de chômage et le taux de croissance économique, postulant qu'une augmentation dans la demande globale incite les entreprises à embaucher davantage de travailleurs pour répondre à la demande croissante des biens et services.
 
-Nous disposons pour cela de bases de données **Open source** fournies par la Banque mondiale, ces dernières comportent les taux de chomage, taux de croissance économique ainsi que d'autres indicateurs socio-économiques pour différents pays du monde.
-   -Les données de la base de données sur le taux de chômage sont mensuelles et s'étalent sur plusieurs années, allant de **Décembre 1993** à **Octobre 2023**.
-   -Les données de la base de données sur le taux de croissance du PIB sont trimestrielles et s'étalent sur plusieurs années, allant du premier trimestre de **1994** au quatrième trimestre de **2023**.
+Nous disposons pour cela de bases de données **Open source** fournies par la Banque mondiale, ces dernières comportent les taux de chomage, taux de croissance économique ainsi que d'autres indicateurs socio-économiques pour différents pays du monde.<br> 
+   -Les données de la base de données sur le taux de chômage sont mensuelles et s'étalent sur plusieurs années, allant de **Décembre 1993** à **Octobre 2023**.<br>
+   -Les données de la base de données sur le taux de croissance du PIB sont trimestrielles et s'étalent sur plusieurs années, allant du premier trimestre de **1994** au quatrième trimestre de **2023**.<br>
 
 **Précision :** La base de données sur le taux de croissance du PIB est celle du PIB déflaté (PIB réel), l'effet de l'inflation étant alors éliminé.
 
@@ -29,7 +29,7 @@ Pour mener à bien ce projet, nous nous sommes inspirés des travaux suivants :
 1. Collecter des données sur le taux de chômage, le taux de croissance du PIB déflaté ainsi que d'autres indicateurs socio-économiques de plusieurs pays du monde.
 2. Parvenir à la construction d'une base de données adaptée aux besoins du projet.
 3. Visualiser et analyser le jeu de données résultant.
-4. Modéliser pour répondre à la problématique du projet.
+4. Modéliser pour répondre à la problématique.
 
 ## Bases de données
 
@@ -73,12 +73,12 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 
 ## [Structure du Projet](https://pythonds.linogaliana.fr/content/getting-started/04_python_practice.html)
 
-- `monmodule/` : Contient les notebooks Jupyter utilisés pour l'analyse, ainsi que :
+- `monmodule/` : Contient les notebooks Jupyter utilisés, ainsi que :
 
-   - `monmodule/bases`: Emplacement pour stocker les données collectées.
+   -`monmodule/bases`: Emplacement pour stocker les données collectées.
 
 - `LICENSE/` pour protéger la propriété intellectuelle
-- `README.md/`
+- `README.md/` pour mieux comprendre la vocation du projet,
 - `requirements.txt/` pour contrôler les dépendances du projet.
 
 Le projet est composé de trois notebooks jupyter, soit trois grandes parties : 
@@ -93,3 +93,5 @@ Le projet est composé de trois notebooks jupyter, soit trois grandes parties :
 
    ```bash
    git clone https://github.com/Marimar4/Projet-Python.git
+
+&hearts;
