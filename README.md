@@ -79,11 +79,11 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 
 - `LICENSE/` pour protéger la propriété intellectuelle
 - `README.md/` pour mieux comprendre la vocation du projet,
-- `requirements.txt/` pour contrôler les dépendances du projet.
+- `requirements.txt/` pour contrôler les dépendances du projet. Ce dernier est généré grâce à [pipreqs](https://pypi.org/project/pipreqs/#description).
 
 Le projet est composé de trois notebooks jupyter, soit trois grandes parties : 
 
-1. `Préparation_données` : Qui constitue le coeur du projet, l'objectif est de construire le jeu de données qu'on souhaite manipuler dans les autres parties.
+1. `Préparation_données` : qui constitue le coeur du projet, l'objectif est de construire le jeu de données qu'on souhaite manipuler dans les autres parties.
 2. `EDA` : il s'agit de la visualisation et de la description des données.
 3. `Modélisation` : pour tester empiriquement le modèle économétrique de la loi d'Okun.
 
