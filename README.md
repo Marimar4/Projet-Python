@@ -27,9 +27,9 @@ Pour mener à bien ce projet, nous nous sommes inspirés des travaux suivants :
 ## Objectifs
 
 1. Collecter des données sur le taux de chômage, le taux de croissance du PIB déflaté ainsi que d'autres indicateurs socio-économiques de plusieurs pays du monde.
-2. 
-3. Analyser les relations entre le taux de croissance du PIB et le taux de chômage pour chaque pays.
-4. Utiliser des visualisations pour présenter les résultats de manière claire et compréhensible.
+2. Parvenir à la construction d'une base de données adaptée aux besoins du projet.
+3. Visualiser et analyser le jeu de données résultant.
+4. Modéliser pour répondre à la problématique du projet.
 
 ## Bases de données
 
@@ -80,6 +80,12 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 - `LICENSE/` pour protéger la propriété intellectuelle
 - `README.md/`
 - `requirements.txt/` pour contrôler les dépendances du projet.
+
+Le projet est composé de trois notebooks jupyter, soit trois grandes parties : 
+
+1. `Préparation_données` : Qui constitue le coeur du projet, l'objectif est de construire le jeu de données qu'on souhaite manipuler dans les autres parties.
+2. `EDA` : il s'agit de la visualisation et de la description des données.
+3. `Modélisation` : pour tester empiriquement le modèle économétrique de la loi d'Okun.
 
 ## Comment exécuter le projet ?
 
