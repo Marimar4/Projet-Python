@@ -27,8 +27,9 @@ Pour mener à bien ce projet, nous nous sommes inspirés des travaux suivants :
 ## Objectifs
 
 1. Collecter des données sur le taux de chômage, le taux de croissance du PIB déflaté ainsi que d'autres indicateurs socio-économiques de plusieurs pays du monde.
-2. Analyser les relations entre le taux de croissance du PIB et le taux de chômage pour chaque pays.
-3. Utiliser des visualisations pour présenter les résultats de manière claire et compréhensible.
+2. 
+3. Analyser les relations entre le taux de croissance du PIB et le taux de chômage pour chaque pays.
+4. Utiliser des visualisations pour présenter les résultats de manière claire et compréhensible.
 
 ## Bases de données
 
