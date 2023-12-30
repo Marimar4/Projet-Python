@@ -49,6 +49,10 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 - Fonctionnalités offertes par Pandas pour la manipulation des données.
 - Matplotlib et Seaborn pour la visualisation.
 - Numpy pour le calcul scientifique en Python. 
+- Geopandas pour faciliter l'utilisation des données géospatiales.
+- Plotly particulièrement le module plotly.express.
+- Dash pour la création de data apps en Python.
+- Statsmodels pour la modélisation.
 
 ## Brainstorm
 
@@ -57,12 +61,16 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 - [Matplotlib](https://matplotlib.org/stable/index.html) est une bibliothèque complète permettant de créer des visualisations statiques, animées et interactives.
 - [Seaborn](https://seaborn.pydata.org/) est une bibliothèque de visualisation de données Python basée sur matplotlib . Il fournit une interface de haut niveau pour dessiner des graphiques statistiques attrayants et informatifs. Elle facilite la création de graphiques basés sur des données DataFrame de pandas.
 - [NumPy](https://numpy.org/doc/) est un package pour le calcul scientifique en Python. 
+- [Geopandas](https://geopandas.org/en/stable/) permet des opérations spatiales sur les types géométriques.
+- [Plotly](https://plotly.com/python/) crée des graphiques interactifs de qualité publication. 
+- [Dash](https://dash.plotly.com/)est un framework web interactif pour la création d'applications web analytiques en Python. C'est une extension de Flask, un framework web pour Python, et utilise également Plotly pour les visualisations interactives.
+- [Statsmodels](https://www.statsmodels.org/stable/index.html) est une bibliothèque qui permet l'estimation de différents modèles statistiques, la réalisation de tests statistiques et l'exploration de données statistiques. 
 
 
 ## Structure du Projet
 
 - `notebooks/` : Contient les notebooks Jupyter utilisés pour l'analyse.
-- `data/` : Emplacement pour stocker les données collectées.
+- `bases/` : Emplacement pour stocker les données collectées.
 - `scripts/` : Scripts Python réutilisables pour la manipulation des données.
 
 ## Comment exécuter le projet ?

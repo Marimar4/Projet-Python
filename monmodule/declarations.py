@@ -1,56 +1,43 @@
 # Déclaration des modules
-# Importation des bases des packages
 
-import pycodestyle as pep8 # not used
-import zipfile
-import requests
-import os
+# Imports liés à l'analyse de données et à la visualisation
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+import geopandas as gpd
+import dash
+from dash import dcc, html, dash_table
+from dash.dependencies import Input, Output
+
+# Imports liés à la manipulation de données
 import pycountry
+from statistics import mean, median, stdev
+import panel as pn
 import io
 from io import BytesIO
-import seaborn as sns
-import missingno as msno
 
-from statistics import *
-import panel as pn
-#import hvplot.pandas
-import geopandas as gpd
-
-import dash
-from dash import dcc,html
-from dash.dependencies import Input, Output
-from dash import dash_table
-import plotly.express as px
-import statistics 
-
+# Imports liés à la modélisation et à la statistique
+import statsmodels.api as sm
 import statsmodels.tsa.filters.hp_filter as smf
 import statsmodels.tsa.ardl as sma
-
-from statsmodels.tsa.stattools import adfuller
-import statsmodels.api as sm
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.stattools import adfuller
 
+# Imports liés à l'apprentissage automatique
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from mpl_toolkits.mplot3d import Axes3D
- 
 
-from statsmodels.tsa.seasonal import seasonal_decompose
-from statsmodels.tsa.stattools import adfuller#,detrend
+# Autres imports
+import zipfile
+import requests
+import os
+import pycodestyle as pep8  # not used
+import missingno as msno
 from scipy.signal import find_peaks
-
-
-
-import dash
-from dash import dcc, html
-from dash.dependencies import Input, Output
-import pandas as pd
-import plotly.express as px
-from statsmodels.tsa.seasonal import seasonal_decompose
-from statsmodels.tsa.stattools import adfuller
 
 
 np.random.seed(123)
@@ -386,4 +373,6 @@ def analyse_serie_temporelle_pays(data, indicateur, pays):
 
     # Test de stationnarité (Augmented Dickey-Fuller)
     result = adfuller(serie_temporelle)
-    print(f'Test de Dickey-Fuller Augmenté:\nStatistique de test = {result[0]}\nValeur critique = {result[4]}')
+    print(f'Test de Dickey-Fuller Augmenté:\nStatistique de test = {result[0]}\nValeur critique (5%) = {result[4]["5%"]}')
+
+
