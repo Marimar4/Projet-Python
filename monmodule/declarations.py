@@ -113,20 +113,6 @@ def correct_country_name(col_names):
 
     return countries_detected
 
-    # def detect_country_name(col_names):
-    countries_detected = []
-
-    for name in col_names:
-        try:
-            # Essayer de trouver le pays par son nom
-            pays = pycountry.countries.search_fuzzy(name)[0]
-            countries_detected.append(pays.name)
-        except LookupError:
-            # Ignorer les noms qui ne correspondent à aucun pays
-            pass
-
-    return countries_detected
-
 
 def detect_country_name(col_names):
     countries_detected = []
@@ -143,7 +129,7 @@ def detect_country_name(col_names):
     return countries_detected
 
 
-# II-4. Visualisation des données manquantes 
+# II-4. Visualisation des données manquantes
 
 
 def missing_plot(df):
@@ -194,7 +180,7 @@ def fill_missing_with_median(df, window_size=30):
     return df
 
 
-# II-7. Extraction de données dans une base 
+# II-7. Extraction de données dans une base
 
 
 def extract2(big_data, keyword1, keyword2):
@@ -258,7 +244,7 @@ def treat_info(df, codes):
     return df
 
 
-# II-9. Transformation des bases en formant long 
+# II-9. Transformation des bases en formant long
 
 
 def transform(df, nom):

@@ -34,9 +34,9 @@ Pour mener à bien ce projet, nous nous sommes inspirés des travaux suivants :
 
 Les données utilisées dans ce projet proviennent des sources suivantes :
 
-- Taux de chômage : [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
-- PIB : [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
-- Indicateurs socio-économiques : [Health Nutrition And Population Statistics](https://datacatalog.worldbank.org/search/dataset/0037652/Health-Nutrition-and-Population-Statistics)
+- **Taux de chômage :** [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
+- **PIB :** [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
+- **Indicateurs socio-économiques :** [Health Nutrition And Population Statistics](https://datacatalog.worldbank.org/search/dataset/0037652/Health-Nutrition-and-Population-Statistics)
 
 **Précision :** 
 
@@ -55,6 +55,8 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 - Dash pour la création de data apps en Python.
 - Statsmodels pour la modélisation.
 
+<u> La liste ci-dessus n'est pas exhaustive. <u>
+
 ## Brainstorm
 
 - [Jupyter Notebook](https://docs.jupyter.org/en/latest/) est un environnement interactif de développement et d'exécution de code qui permet de créer et de partager des documents contenant du code, des visualisations et du texte explicatif.
@@ -68,11 +70,15 @@ Les données utilisées dans ce projet proviennent des sources suivantes :
 - [Statsmodels](https://www.statsmodels.org/stable/index.html) est une bibliothèque qui permet l'estimation de différents modèles statistiques, la réalisation de tests statistiques et l'exploration de données statistiques. 
 
 
-## Structure du Projet
+## [Structure du Projet](https://pythonds.linogaliana.fr/content/getting-started/04_python_practice.html)
 
-- `notebooks/` : Contient les notebooks Jupyter utilisés pour l'analyse.
-- `bases/` : Emplacement pour stocker les données collectées.
-- `scripts/` : Scripts Python réutilisables pour la manipulation des données.
+- `monmodule/` : Contient les notebooks Jupyter utilisés pour l'analyse, ainsi que :
+
+   - `monmodule/bases`: Emplacement pour stocker les données collectées.
+
+- `LICENSE/` pour protéger la propriété intellectuelle
+- `README.md/`
+- `requirements.txt/` pour contrôler les dépendances du projet.
 
 ## Comment exécuter le projet ?
 
