@@ -12,28 +12,29 @@ Nous disposons pour cela de bases de données **Open source** fournies par la Ba
 **Précision :** La base de données sur le taux de croissance du PIB est celle du PIB déflaté (PIB réel), l'effet de l'inflation étant alors éliminé.
 
 
-
 ## Revue de littérature : 
 
 **Loi d'Okun :** 
-Pour ce projet de modélisation, nous nous sommes inspirés des travaux suivants : 
 
-- [1]. Traoré, D. L., Diakite, S., & Mariko, O. (2021). Croissance et chômage au Mali : Vérification empirique de la loi d'Okun. Revue Malienne de Science et de Technologie, Série C : Sciences Humaines et Sociales, 02(25), Page. ISSN 1987-1031. CNRST, Bamako, Mali.
+Pour mener à bien ce projet, nous nous sommes inspirés des travaux suivants : 
 
-- [2]. Aassif, Z. L'extraction de la tendance cycle. Haut-Commissariat au Plan, Direction de la comptabilité nationale. 
+- [1](https://revues.ml/index.php/rmst/article/view/2202/1508) Traoré, D. L., Diakite, S., & Mariko, O. (2021). Croissance et chômage au Mali : Vérification empirique de la loi d'Okun. Revue Malienne de Science et de Technologie, Série C : Sciences Humaines et Sociales, 02(25), Page. ISSN 1987-1031. CNRST, Bamako, Mali.
 
-- [3]. Mills, T. C. (2019). Chapter 12 - Transfer Functions and Autoregressive Distributed Lag Modeling. In Applied Time Series Analysis: A Practical Guide to Modeling and Forecasting (pp. 201-210). Loughborough University, Loughborough, United Kingdom. https://doi.org/10.1016/B978-0-12-813117-6.00012-0
+- [2](https://www.insee.fr/fr/statistiques/fichier/2646286/05-aassif-extraction-de-la-tendance-cycle.pdf) Aassif, Z. L'extraction de la tendance cycle. Haut-Commissariat au Plan, Direction de la comptabilité nationale. 
+
+- [3](https://doi.org/10.1016/B978-0-12-813117-6.00012-0) Mills, T. C. (2019). Chapter 12 - Transfer Functions and Autoregressive Distributed Lag Modeling. In Applied Time Series Analysis: A Practical Guide to Modeling and Forecasting (pp. 201-210). Loughborough University, Loughborough, United Kingdom. 
 
 ## Objectifs
 
-1. Collecter des données sur le taux de chômage, le taux de croissance du PIB ainsi que d'autres indicateurs socio-économiques de plusieurs pays du monde.
+1. Collecter des données sur le taux de chômage, le taux de croissance du PIB déflaté ainsi que d'autres indicateurs socio-économiques de plusieurs pays du monde.
 2. Analyser les relations entre le taux de croissance du PIB et le taux de chômage pour chaque pays.
 3. Utiliser des visualisations pour présenter les résultats de manière claire et compréhensible.
 
 ## Bases de données
 
 Les données utilisées dans ce projet proviennent des sources suivantes :
-- Taux de chômage : [Banque mondiale - Indicateurs du travail](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
+
+- Taux de chômage : [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
 - PIB : [Global Economic Monitor](https://datacatalog.worldbank.org/search/dataset/0037798/Global-Economic-Monitor)
 - Indicateurs socio-économiques : [Health Nutrition And Population Statistics](https://datacatalog.worldbank.org/search/dataset/0037652/Health-Nutrition-and-Population-Statistics)
 

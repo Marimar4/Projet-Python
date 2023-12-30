@@ -1,6 +1,6 @@
-# Déclaration des modules
+# I- Déclaration des modules
 
-# Imports liés à l'analyse de données et à la visualisation
+# I-1. Imports liés à l'analyse de données et à la visualisation
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,14 +11,13 @@ import dash
 from dash import dcc, html, dash_table
 from dash.dependencies import Input, Output
 
-# Imports liés à la manipulation de données
+# I-2. Imports liés à la manipulation de données
 import pycountry
 from statistics import mean, median, stdev
-import panel as pn
 import io
 from io import BytesIO
 
-# Imports liés à la modélisation et à la statistique
+# I-3. Imports liés à la modélisation et à la statistique
 import statsmodels.api as sm
 import statsmodels.tsa.filters.hp_filter as smf
 import statsmodels.tsa.ardl as sma
@@ -26,68 +25,25 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.stattools import adfuller
 
-# Imports liés à l'apprentissage automatique
+# I-4.  Imports liés à l'apprentissage automatique
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from mpl_toolkits.mplot3d import Axes3D
 
-# Autres imports
+# I-5. Autres imports
 import zipfile
 import requests
 import os
-import pycodestyle as pep8  # not used
 import missingno as msno
 from scipy.signal import find_peaks
 
+# Pour assurer la reproductibilité de nos résultats, on définit la graine aléatoire sur 123
 
 np.random.seed(123)
 
-# Déclaration des fonctions
+# II- Déclaration des fonctions
 
-
-"""
-class MonProjet:
-    def __init__(self) -> None:
-        self.f_gmd = "GMD"
-        self.f_countrycode = "countrycode"
-        self.f_countryname = "countryname"
-        self.f_year = "year"
-        self.f_region = "region"
-        self.f_regionname = "regionname"
-        self.f_incomelevelname = "incomelevelname"
-        self.f_lendingtypename = "lendingtypename"
-        self.f_index = "index"
-        self.f_between = "between"
-        self.f_within = "within"
-        self.f_noregion = "noregion"
-        self.f_nobs = "nobs"
-        self.f_minwelfare_median = "minwelfare_median"
-        self.f_maxwelfare_median = "maxwelfare_median"
-        self.f_minwelfare_mean = "minwelfare_mean"
-        self.f_maxwelfare_mean = "maxwelfare_mean"
-        self.f_minwelfare_b1 = "minwelfare_b1"
-        self.f_maxwelfare_b1 = "maxwelfare_b1"
-        self.f_minwelfare_t1 = "minwelfare_t1"
-        self.f_maxwelfare_t1 = "maxwelfare_t1"
-        self.f_ineq = "ineq"
-        self.f_withinreg = "withinreg"
-        self.f_ny_gdp_pcap_pp_kd = "ny_gdp_pcap_pp_kd"
-        self.f_sp_urb_totl_in_zs = "sp_urb_totl_in_zs"
-        self.f_sp_pop_totl = "sp_pop_totl"
-        self.f_en_urb_lcty_ur_zs = "en_urb_lcty_ur_zs"
-        self.f_si_pov_lmic = "si_pov_lmic"
-        self.f_loggdp = "loggdp"
-        self.f_logpop = "logpop"
-        self.f_pib = "pib"
-        self.f_unemployment_rate = "unemployment_rate"
-
-        #Rajouter les méthodes
-        pass """
-
-
-# Déclaration des fonctions
-
-# Télécharger le fichier
+# II-1. Téléchargement du fichier
 
 
 def load(url, nom_fichier):
@@ -104,7 +60,7 @@ def load(url, nom_fichier):
         print(f"Erreur de téléchargement : {response.status_code}")
 
 
-# Fonction d'extraction de base dans un fichier zippé
+# II-2. Fonction d'extraction de base dans un fichier zippé
 
 
 def extraire_fichier_zip(chemin_zip, nom_fichier, nom_feuille):
@@ -134,7 +90,9 @@ def extraire_fichier_zip(chemin_zip, nom_fichier, nom_feuille):
             return df
 
 
-# Méthode search_fuzzy de pycountry pour corrections des noms des pays
+# II-3. Méthode search_fuzzy de pycountry pour corrections des noms des pays
+
+
 def correct_country_name(col_names):
     countries_detected = []
     """ Dictionnaire de correspondance entre noms complets des pays et leurs codes """
@@ -185,7 +143,9 @@ def detect_country_name(col_names):
     return countries_detected
 
 
-# ********** visualisation des données manquantes ***********#
+# II-4. Visualisation des données manquantes 
+
+
 def missing_plot(df):
     """
     Visualise les valeurs manquantes avec un diagramme à barres et un heatmap.
@@ -204,9 +164,8 @@ def missing_plot(df):
     plt.show()
 
 
-# *********** affichage des valeurs manquantes **********#
+# II-5. Suppression des valeurs manquantes
 
-    # Suppression des deux premières lignes
 
 def missing(df):
     # Suppression de certaines valeurs manquantes
@@ -214,13 +173,12 @@ def missing(df):
 
     print("Pourcentage de valeurs manquantes par variable")
     print(
-        (
-        df.isna().sum() / len(df) * 100)[df.isna().any()].sort_values(ascending=False)
+        (df.isna().sum() / len(df) * 100)[df.isna().any()].sort_values(ascending=False)
         )
     return df
 
 
-# ************ remplissage des valeurs manquantes ***********#
+#II-6. Imputation des valeurs manquantes
 
 
 def fill_missing_with_median(df, window_size=30):
@@ -236,7 +194,9 @@ def fill_missing_with_median(df, window_size=30):
     return df
 
 
-# ************extraction de données dans une base ***********#
+# II-7. Extraction de données dans une base 
+
+
 def extract2(big_data, keyword1, keyword2):
     # Créer le masque
     mask = big_data["Indicator Name"].str.contains(keyword1, case=False) & big_data[
@@ -249,7 +209,7 @@ def extract2(big_data, keyword1, keyword2):
     return df
 
 
-# ************Traitement des données extraites pour constituer une base *********** #
+# II-8. Traitement des données extraites pour constituer une base
 
 
 def treat_info(df, codes):
@@ -298,7 +258,7 @@ def treat_info(df, codes):
     return df
 
 
-# ************ Transformation des bases en formant long ***********#
+# II-9. Transformation des bases en formant long 
 
 
 def transform(df, nom):
@@ -317,20 +277,18 @@ def transform(df, nom):
     return df_transformed
 
 
-## ************ visualisation avec la carte***********###
+# II-10. Analyse des séries temporellesś
 
 
-
-### ----- analyse des serie temp
 def analyse_serie_temporelle_pays(data, indicateur, pays):
-    df=data.copy()
+    df = data.copy()
     # Utilisation de la fonction pivot pour remodeler le dataframe
     df = df.pivot(index=['YEAR'], columns='COUNTRY', values=indicateur)
     df['YEAR'] = pd.to_datetime(df.index)
-    
+
     # Sélectionner la série temporelle du pays spécifique
     serie_temporelle = df[pays].dropna()
-    
+
     # Moyenne mobile d'ordre 4
     rolling_mean = serie_temporelle.rolling(window=4).mean()
 
@@ -374,5 +332,3 @@ def analyse_serie_temporelle_pays(data, indicateur, pays):
     # Test de stationnarité (Augmented Dickey-Fuller)
     result = adfuller(serie_temporelle)
     print(f'Test de Dickey-Fuller Augmenté:\nStatistique de test = {result[0]}\nValeur critique (5%) = {result[4]["5%"]}')
-
-
